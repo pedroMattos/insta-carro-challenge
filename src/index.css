@@ -11,3 +11,10 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+:root {
+  --black: #212121;
+  --black-bkacground: #202020;
+  --orange: #F43735;
+  --orange-100: #F99A99;
+}
