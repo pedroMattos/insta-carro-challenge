@@ -24,3 +24,40 @@ export const HomeTitle = styled.h1`
   color: var(--black);
   opacity: .6;
 `
+
+export const CardsSection = styled.section`
+  display: flex;
+  width: 880px;
+  margin: 0 auto;
+  flex-direction: column;
+  margin-top: 50px;
+`
+
+export const CardsSectionHeader = styled.div`
+  display: flex;
+  justify-content: space-between;
+`
+
+export const HeroesCounter = styled.p`
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--gray);
+  margin: 0;
+`
+
+export const LoveFilterButton = styled.button`
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  color: var(--orange);
+  font-weight: 500;
+  font-size: 18px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+`
+
+export const CardsArea = styled.div`
+  display: flex;
+  gap: 15px;
+`
