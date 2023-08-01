@@ -6,7 +6,7 @@ export default function HeroCard({ heroData }) {
   const navigate = useNavigate()
   const heroDescriptionText = !!heroData.description.trim() ? heroData.description : 'Herói sem descrição'
   const handleNavigate = () => {
-    navigate(`/profile/${heroData.id}`)
+    navigate(`/profile/${heroData.id}/${heroData.name}`)
   }
   return (
     <HeroCardWrapper>
