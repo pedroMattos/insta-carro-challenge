@@ -1,3 +1,4 @@
+import SearchField from "../../../components/FormFields/SearchField/SearchField";
 import HeroCard from "../../../components/Cards/HeroCard/HeroCard";
 import Loading from "../../../components/Loading/Loading";
 import Pagination from "../../../components/Pagination/Pagination";
@@ -9,6 +10,7 @@ export default function HomeCards() {
   const { heroes, isLoading, totalItems, handlePageChange, handleSearch } = useHeroesData()
   return (
     <CardsSection>
+      <SearchField onChange={handleSearch} />
       <CardsSectionHeader>
         <HeroesCounter>Encontrados {totalItems} heróis</HeroesCounter>
         <LoveFilter />
