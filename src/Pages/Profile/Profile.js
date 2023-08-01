@@ -1,3 +1,4 @@
+import HeroDetailCard from "../../components/Cards/HeroDetailCard/HeroDetailCard";
 import Footer from "../../components/Footer/Footer";
 import useProfileData from "../../hooks/useProfileData";
 import ProfileHeader from "./ProfileHeader";
@@ -8,6 +9,7 @@ export default function Profile() {
   return (
     <>
       <ProfileHeader image={bannerImage} />
+      <HeroDetailCard/>
       <Footer />
     </>
   )

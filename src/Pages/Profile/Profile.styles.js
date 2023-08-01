@@ -2,7 +2,7 @@ import { styled } from "styled-components";
 
 export const Banner = styled.div`
   width: 100vw;
-  height: 500px;
+  height: 300px;
   z-index: 0;
   ${({ $backGroundImage }) => $backGroundImage ? `
   background-image: url(${$backGroundImage});
@@ -33,7 +33,7 @@ export const ProfiteTitle = styled.h1`
   z-index: 3;
   color: white;
   width: 30%;
-  top: 100px;
-  left: 200px;
+  top: 50px;
+  left: 10%;
   margin: 0;
 `
