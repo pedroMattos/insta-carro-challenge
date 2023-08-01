@@ -60,4 +60,6 @@ export const LoveFilterButton = styled.button`
 export const CardsArea = styled.div`
   display: flex;
   gap: 15px;
+  flex-wrap: wrap;
+  margin-top: 20px;
 `
