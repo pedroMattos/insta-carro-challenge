@@ -1,8 +1,10 @@
 import HeroCard from "../../../components/Cards/HeroCard/HeroCard";
+import useHeroesData from "../../../hooks/useHeroesData";
 import { CardsArea, CardsSection, CardsSectionHeader, HeroesCounter } from "../Home.styles";
 import LoveFilter from "./LoveFilter";
 
 export default function HomeCards() {
+  const { heroes, isLoading, totalItems, handlePageChange, handleSearch } = useHeroesData()
   return (
     <CardsSection>
       <CardsSectionHeader>
@@ -10,10 +12,7 @@ export default function HomeCards() {
         <LoveFilter />
       </CardsSectionHeader>
       <CardsArea>
-        <HeroCard />
-        <HeroCard />
-        <HeroCard />
-        <HeroCard />
+        {!isLoading && heroes.map((hero) => <HeroCard key={hero.id} heroData={hero} />)}
       </CardsArea>
     </CardsSection>
   )
