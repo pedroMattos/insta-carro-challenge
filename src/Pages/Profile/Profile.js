@@ -1,8 +1,14 @@
-import { useParams } from "react-router-dom"
+import Footer from "../../components/Footer/Footer";
+import useProfileData from "../../hooks/useProfileData";
+import ProfileHeader from "./ProfileHeader";
 
 export default function Profile() {
-  const { id } = useParams()
+  const { heroData, isLoading, name, bannerImage } = useProfileData()
+  console.log(heroData, name)
   return (
-    <p>Perfil {id}</p>
+    <>
+      <ProfileHeader image={bannerImage} />
+      <Footer />
+    </>
   )
 }
