@@ -8,7 +8,7 @@ export default function useHeroesData() {
   const [isLoading, setIsLoading] = useState(true)
   const [pageOffset, setPageOffset] = useState(1)
 
-  const handlePageChange = (event, page) => {
+  const handlePageChange = (page) => {
     const offset = (page - 1) * PER_PAGE
     reFetchAgents(offset)
     setIsLoading(true)
