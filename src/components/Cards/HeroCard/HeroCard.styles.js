@@ -11,6 +11,7 @@ export const HeroCardWrapper = styled.div`
   align-items: center;
   padding-top: 10px;
   gap: 10px;
+  cursor: pointer;
 `
 
 export const HeroFigure = styled.figure`
