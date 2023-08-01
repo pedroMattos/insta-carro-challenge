@@ -39,7 +39,7 @@ export const CardsSectionHeader = styled.div`
 `
 
 export const HeroesCounter = styled.p`
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 500;
   color: var(--gray);
   margin: 0;
@@ -62,4 +62,5 @@ export const CardsArea = styled.div`
   gap: 15px;
   flex-wrap: wrap;
   margin-top: 20px;
+  min-height: 539px;
 `
