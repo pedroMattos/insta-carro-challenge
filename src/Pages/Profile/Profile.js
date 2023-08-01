@@ -11,7 +11,7 @@ const mapStateToProps = (state) => {
 }
 
 function Profile({ data }) {
-  const { heroData, isLoading, name, bannerImage } = useProfileData()
+  const { comicsData, isLoading, bannerImage } = useProfileData()
   return (
     <>
       <ProfileHeader image={bannerImage} />
