@@ -11,7 +11,7 @@ export default function useProfileData() {
   const fetchHeroData = async () => {
     const { results } = await getHeroById(id)
     setHeroData(results)
-    setBannerImage(`${results.at(0).thumbnail.path}.${results.at(0).thumbnail.extension}`)
+    setBannerImage(`${results.at(0).images.at(0).path}.${results.at(0).images.at(0).extension}`)
     setIsLoading(false)
   }
 
