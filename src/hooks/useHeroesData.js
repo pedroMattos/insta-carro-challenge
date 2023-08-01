@@ -15,10 +15,9 @@ export default function useHeroesData() {
   }
 
   const handleSearch = (event) => {
-    const isNotEmpty = !!event.target.value.trim()
     const searchTerm = event.target.value
     const startSearch = debounce(() => {
-      if (isNotEmpty) reFetchAgents(pageOffset, searchTerm)
+      reFetchAgents(pageOffset, searchTerm)
     }, 1000)
 
     startSearch()
