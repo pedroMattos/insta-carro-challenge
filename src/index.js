@@ -7,13 +7,17 @@ import {
 } from "react-router-dom";
 import Home from './Pages/Home/Home';
 import Profile from './Pages/Profile/Profile';
+import store from './store/store'
+import { Provider } from 'react-redux';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: (
     <React.StrictMode>
-      <Home />
+      <Provider store={store}>
+        <Home />
+      </Provider>
     </React.StrictMode>
     ),
   },
@@ -21,7 +25,9 @@ const router = createBrowserRouter([
     path: "/profile/:id/:name",
     element: (
     <React.StrictMode>
-      <Profile />
+      <Provider store={store}>
+        <Profile />
+      </Provider>
     </React.StrictMode>
     ),
   },
