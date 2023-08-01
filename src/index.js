@@ -18,7 +18,7 @@ const router = createBrowserRouter([
     ),
   },
   {
-    path: "/profile/:id",
+    path: "/profile/:id/:name",
     element: (
     <React.StrictMode>
       <Profile />
