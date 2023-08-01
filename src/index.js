@@ -6,6 +6,7 @@ import {
   createBrowserRouter,
 } from "react-router-dom";
 import Home from './Pages/Home/Home';
+import Profile from './Pages/Profile/Profile';
 
 const router = createBrowserRouter([
   {
@@ -13,6 +14,14 @@ const router = createBrowserRouter([
     element: (
     <React.StrictMode>
       <Home />
+    </React.StrictMode>
+    ),
+  },
+  {
+    path: "/profile/:id",
+    element: (
+    <React.StrictMode>
+      <Profile />
     </React.StrictMode>
     ),
   },
