@@ -8,7 +8,7 @@ function HeroCard({ heroData, dispatch }) {
   const heroDescriptionText = !!heroData.description.trim() ? heroData.description : 'Herói sem descrição'
   const handleNavigate = () => {
     dispatch({ type: 'UPDATE_DATA', payload: heroData })
-    navigate(`/profile/${heroData.id}/${heroData.name}`)
+    navigate(`/profile/${heroData.id}`)
   }
   return (
     <HeroCardWrapper>
