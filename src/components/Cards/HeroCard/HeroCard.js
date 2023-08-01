@@ -1,11 +1,13 @@
 import { useNavigate } from "react-router-dom";
 import LoveIconOff from "../../Icons/LoveIconOff/LoveIconOff";
 import { HeroCardWrapper, HeroDescription, HeroFigure, HeroLoveAndName, HeroName, LoveButton } from "./HeroCard.styles";
+import { connect } from "react-redux";
 
-export default function HeroCard({ heroData }) {
+function HeroCard({ heroData, dispatch }) {
   const navigate = useNavigate()
   const heroDescriptionText = !!heroData.description.trim() ? heroData.description : 'Herói sem descrição'
   const handleNavigate = () => {
+    dispatch({ type: 'UPDATE_DATA', payload: heroData })
     navigate(`/profile/${heroData.id}/${heroData.name}`)
   }
   return (
@@ -25,3 +27,5 @@ export default function HeroCard({ heroData }) {
     </HeroCardWrapper>
   )
 }
+
+export default connect()(HeroCard)
