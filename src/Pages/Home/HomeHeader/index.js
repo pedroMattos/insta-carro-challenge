@@ -1,4 +1,3 @@
-import SearchField from "../../../components/FormFields/SearchField/SearchField";
 import { HeaderText, HomeHeaderWrapper, HomeTitle } from "../Home.styles";
 
 export default function HomeHeader() {
@@ -9,7 +8,6 @@ export default function HomeHeader() {
         Os melhores personagens já feitos em quadrinhos.
         Fique viciado em uma generosa porção de heróis e vilões!
       </HeaderText>
-      <SearchField />
     </HomeHeaderWrapper>
   )
 }
