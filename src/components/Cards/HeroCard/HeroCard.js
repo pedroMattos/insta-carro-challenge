@@ -1,7 +1,8 @@
 import LoveIconOff from "../../Icons/LoveIconOff/LoveIconOff";
-import { HeroCardWrapper, HeroFigure, HeroLoveAndName, HeroName, LoveButton } from "./HeroCard.styles";
+import { HeroCardWrapper, HeroDescription, HeroFigure, HeroLoveAndName, HeroName, LoveButton } from "./HeroCard.styles";
 
 export default function HeroCard({ heroData }) {
+  const heroDescriptionText = !!heroData.description.trim() ? heroData.description : 'Herói sem descrição'
   return (
     <HeroCardWrapper>
       <HeroFigure>
@@ -13,6 +14,9 @@ export default function HeroCard({ heroData }) {
           <LoveIconOff width={20} height={20} />
         </LoveButton>
       </HeroLoveAndName>
+      <HeroDescription>
+        {heroDescriptionText}
+      </HeroDescription>
     </HeroCardWrapper>
   )
 }
