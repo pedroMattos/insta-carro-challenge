@@ -1,4 +1,5 @@
 import HeroCard from "../../../components/Cards/HeroCard/HeroCard";
+import Pagination from "../../../components/Pagination/Pagination";
 import useHeroesData from "../../../hooks/useHeroesData";
 import { CardsArea, CardsSection, CardsSectionHeader, HeroesCounter } from "../Home.styles";
 import LoveFilter from "./LoveFilter";
@@ -14,6 +15,7 @@ export default function HomeCards() {
       <CardsArea>
         {!isLoading && heroes.map((hero) => <HeroCard key={hero.id} heroData={hero} />)}
       </CardsArea>
+      <Pagination totalItems={totalItems} itemsPerPage={8} onChangePage={handlePageChange} />
     </CardsSection>
   )
 }
