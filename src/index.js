@@ -22,7 +22,7 @@ const router = createBrowserRouter([
     ),
   },
   {
-    path: "/profile/:id/:name",
+    path: "/profile/:id",
     element: (
     <React.StrictMode>
       <Provider store={store}>
