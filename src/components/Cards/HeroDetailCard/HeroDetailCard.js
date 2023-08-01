@@ -1,6 +1,7 @@
 import { HeroDetailCardWrapper, HeroName, HeroNameAndDescription, HeroThumbNail } from "./HeroDetailCard.styles";
 
 export default function HeroDetailCard ({ heroData }) {
+  const heroDescription = !!heroData.description.trim() ? heroData.description : 'Herói sem descrição'
   return(
     <HeroDetailCardWrapper>
       <HeroThumbNail>
@@ -8,7 +9,7 @@ export default function HeroDetailCard ({ heroData }) {
       </HeroThumbNail>
       <HeroNameAndDescription>
         <HeroName>{heroData.name}</HeroName>
-        <p>{heroData.description}</p>
+        <p>{heroDescription}</p>
       </HeroNameAndDescription>
     </HeroDetailCardWrapper>
   )
