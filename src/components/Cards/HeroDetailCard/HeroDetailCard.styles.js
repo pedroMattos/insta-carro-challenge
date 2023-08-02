@@ -20,13 +20,15 @@ export const HeroDetailCardWrapper = styled.div`
 `
 
 export const HeroThumbNail = styled.figure`
-  width: 150px;
+  min-width: 150px;
+  max-width: 150px;
   height: 150px;
   border-radius: 50%;
   margin: 0 0 0 20px;
   overflow: hidden;
   img {
-    width: 150px;
+    min-width: 150px;
+    max-width: 150px;
     height: 150px;
     object-fit: cover;
   }

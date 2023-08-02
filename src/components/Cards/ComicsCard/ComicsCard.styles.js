@@ -17,7 +17,7 @@ export const ComicCover = styled.figure`
   overflow: hidden;
   margin: 0;
   img {
-    width: 150px;
+    min-width: 150px;
     height: 180px;
     object-fit: cover;
   }
