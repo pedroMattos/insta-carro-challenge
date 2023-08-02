@@ -1,26 +1,29 @@
 import SearchField from "../../../components/FormFields/SearchField/SearchField";
-import HeroCard from "../../../components/Cards/HeroCard/HeroCard";
-import Loading from "../../../components/Loading/Loading";
 import Pagination from "../../../components/Pagination/Pagination";
 import useHeroesData from "../../../hooks/useHeroesData";
 import { CardsArea, CardsSection, CardsSectionHeader, HeroesCounter } from "../Home.styles";
 import LoveFilter from "./LoveFilter";
+import { useState } from "react";
+import useOnlyFavorites from "../../../hooks/useOnlyFavorites";
+import AllHeroes from "./AllHeroes";
 
 export default function HomeCards() {
   const { heroes, isLoading, totalItems, handlePageChange, handleSearch } = useHeroesData()
+  const { allFavorites } = useOnlyFavorites()
+  const [showFavorites, setShowFavorites] = useState(heroes)
+  const handleFilterFavorites = () => setShowFavorites((show) => !show)
+
   return (
     <CardsSection>
       <SearchField onChange={handleSearch} />
       <CardsSectionHeader>
         <HeroesCounter>Encontrados {totalItems} heróis</HeroesCounter>
-        <LoveFilter />
+        <LoveFilter onClick={handleFilterFavorites} />
       </CardsSectionHeader>
       <CardsArea>
-        {!isLoading ?
-          heroes.map((hero) => <HeroCard key={hero.id} heroData={hero} />)
-          : <Loading />}
+        <AllHeroes isLoading={isLoading} heroesData={heroes} showFavorites={showFavorites} favoriteHeroes={allFavorites} />
       </CardsArea>
-      <Pagination totalItems={totalItems} itemsPerPage={8} onChangePage={handlePageChange} />
+      {!showFavorites && <Pagination totalItems={totalItems} itemsPerPage={8} onChangePage={handlePageChange} />}
     </CardsSection>
   )
 }
