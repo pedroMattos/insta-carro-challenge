@@ -23,5 +23,5 @@ Projeto simples de exibição de dados de heróis da márvel e exibição de um 
     
 ## Stack utilizada
 
-Reactjs, Axios, Momentjs, React redux, Dexiedb, Lodash
+Reactjs, Axios, Momentjs, React redux, Dexiedb, Lodash, Md5, Styled Components
 
