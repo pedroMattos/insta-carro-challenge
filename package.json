@@ -8,6 +8,8 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "axios": "^1.4.0",
+    "dexie": "^3.2.4",
+    "dexie-react-hooks": "^1.1.6",
     "lodash.debounce": "^4.0.8",
     "md5": "^2.3.0",
     "moment": "^2.29.4",
