@@ -16,16 +16,22 @@ export default function useHeroesData() {
 
   const handleSearch = (event) => {
     const searchTerm = event.target.value
+    const isNoEmpty = !!searchTerm.trim()
     const startSearch = debounce(() => {
+      if (isNoEmpty) {
+        reFetchAgents(0, searchTerm, false)
+        return
+      }
+
       reFetchAgents(pageOffset, searchTerm)
     }, 1000)
 
     startSearch()
   }
 
-  const reFetchAgents = async (offset, searchTerm) => {
+  const reFetchAgents = async (offset, searchTerm, changeOffset = true) => {
     const { results, total } = await getAllHeroes(offset, searchTerm)
-    setPageOffset(offset)
+    changeOffset && setPageOffset(offset)
     setHeroes(results)
     setTotalItems(total)
     setIsLoading(false)
