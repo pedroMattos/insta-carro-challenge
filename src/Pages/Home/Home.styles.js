@@ -3,7 +3,7 @@ import { styled } from "styled-components";
 export const HomeHeaderWrapper = styled.nav`
   display: flex;
   flex-direction: column;
-  margin-top: 140px;
+  margin-top: 120px;
   align-items: center;
 `
 
@@ -63,4 +63,11 @@ export const CardsArea = styled.div`
   flex-wrap: wrap;
   margin-top: 20px;
   min-height: 539px;
+`
+
+export const HomeWrapper = styled.div`
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 `

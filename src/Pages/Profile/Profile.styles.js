@@ -1,4 +1,5 @@
 import { styled } from "styled-components";
+import { HomeWrapper } from "../Home/Home.styles";
 
 export const Banner = styled.div`
   height: 300px;
@@ -42,3 +43,5 @@ export const ComicCardsWrapper = styled.div`
   flex-direction: column;
   gap: 20px;
 `
+
+export const ProfileWrapper = styled(HomeWrapper)``
