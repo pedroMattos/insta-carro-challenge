@@ -9,9 +9,12 @@ import AllHeroes from "./AllHeroes";
 
 export default function HomeCards() {
   const { heroes, isLoading, totalItems, handlePageChange, handleSearch } = useHeroesData()
-  const { allFavorites } = useOnlyFavorites()
+  const { allFavorites, onlyFavorites, isLoadingFavorites } = useOnlyFavorites()
   const [showFavorites, setShowFavorites] = useState(heroes)
-  const handleFilterFavorites = () => setShowFavorites((show) => !show)
+  const handleFilterFavorites = () => {
+    setShowFavorites((show) => !show)
+    onlyFavorites()
+  }
 
   return (
     <CardsSection>
@@ -21,7 +24,13 @@ export default function HomeCards() {
         <LoveFilter onClick={handleFilterFavorites} />
       </CardsSectionHeader>
       <CardsArea>
-        <AllHeroes isLoading={isLoading} heroesData={heroes} showFavorites={showFavorites} favoriteHeroes={allFavorites} />
+        <AllHeroes
+          isLoadingFavorites={isLoadingFavorites}
+          isLoading={isLoading}
+          heroesData={heroes}
+          showFavorites={showFavorites}
+          favoriteHeroes={allFavorites}
+        />
       </CardsArea>
       {!showFavorites && <Pagination totalItems={totalItems} itemsPerPage={8} onChangePage={handlePageChange} />}
     </CardsSection>
