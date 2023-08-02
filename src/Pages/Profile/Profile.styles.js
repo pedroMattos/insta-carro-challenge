@@ -1,7 +1,6 @@
 import { styled } from "styled-components";
 
 export const Banner = styled.div`
-  width: 100vw;
   height: 300px;
   z-index: 0;
   ${({ $backGroundImage }) => $backGroundImage ? `
@@ -36,4 +35,10 @@ export const ProfiteTitle = styled.h1`
   top: 50px;
   left: 10%;
   margin: 0;
+`
+
+export const ComicCardsWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 `
