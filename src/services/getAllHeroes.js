@@ -10,7 +10,7 @@ async function getAllHeroes(offset = 0, searchTerm = '') {
   const md5Hash = md5(timestamp + privateKey + publicKey)
   const obrigatoryParams = `&ts=${timestamp}&apikey=${publicKey}&hash=${md5Hash}`
   const { data } = await axios
-    .get(`http://gateway.marvel.com/v1/public/characters?limit=8&${hasSearch ? startsWithSearch : ''}offset=${offset}${obrigatoryParams}`)
+    .get(`https://gateway.marvel.com/v1/public/characters?limit=8&${hasSearch ? startsWithSearch : ''}offset=${offset}${obrigatoryParams}`)
 
   return data.data
 }

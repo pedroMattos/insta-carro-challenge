@@ -8,7 +8,7 @@ async function getHeroById(heroId) {
   const md5Hash = md5(timestamp + privateKey + publicKey)
   const obrigatoryParams = `&ts=${timestamp}&apikey=${publicKey}&hash=${md5Hash}`
   const { data } = await axios
-    .get(`http://gateway.marvel.com/v1/public/characters/${heroId}/comics?&limit=5${obrigatoryParams}`)
+    .get(`https://gateway.marvel.com/v1/public/characters/${heroId}/comics?&limit=5${obrigatoryParams}`)
 
   return data.data
 }
