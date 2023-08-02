@@ -6,7 +6,6 @@ export const HomeHeaderWrapper = styled.nav`
   margin-top: 120px;
   align-items: center;
   @media (max-width: 800px) {
-    width: 500px;;
     margin: 0 auto;
   }
 `
@@ -20,6 +19,7 @@ export const HomeTitle = styled.h1`
   text-align: center;
   @media (max-width: 800px) {
     padding: 10px;
+    font-size: 30px;
   }
 `
   
@@ -33,6 +33,7 @@ export const HomeTitle = styled.h1`
   @media (max-width: 800px) {
     text-align: center;
     padding: 0 10px;
+    font-size: 18px;
   }
 `
 
@@ -43,7 +44,7 @@ export const CardsSection = styled.section`
   flex-direction: column;
   margin-top: 50px;
   @media (max-width: 800px) {
-    max-width: 500px;
+    width: 100vw;
   }
 `
 
@@ -92,6 +93,6 @@ export const HomeWrapper = styled.div`
   flex-direction: column;
   justify-content: space-between;
   @media (max-width: 800px) {
-    max-width: 600px;
+    width: 100vw;
   }
 `

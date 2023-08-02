@@ -14,7 +14,7 @@ export const HeroCardWrapper = styled.div`
   cursor: pointer;
   background-color: white;
   @media (max-width: 800px) {
-    max-width: 450px;
+    min-width: 350px;
     margin: 0 auto;
     height: 500px;
   }
@@ -27,7 +27,7 @@ export const HeroFigure = styled.figure`
   overflow: hidden;
   border-radius: 8px;
   @media (max-width: 800px) {
-    width: 400px;
+    min-width: 300px;
     height: 300px;
   }
   img {
@@ -35,7 +35,7 @@ export const HeroFigure = styled.figure`
     height: auto;
     object-fit: cover;
     @media (max-width: 800px) {
-      width: 400px;
+      min-width: 200px;
       height: 300px;
     }
   }
@@ -49,6 +49,7 @@ export const HeroLoveAndName = styled.div`
 `
 
 export const HeroName = styled.p`
+  padding-left: 13px;
   margin: 0;
   width: 100px;
   white-space: nowrap;
@@ -57,7 +58,7 @@ export const HeroName = styled.p`
   @media (max-width: 800px) {
     padding-left: 23px;
     font-size: 22px;
-    width: 250px;
+    min-width: 100px;
   }
 `
 
@@ -105,6 +106,7 @@ export const HeroDescription = styled.p`
   color: var(--black);
   @media (max-width: 800px) {
     font-size: 20px;
-    width: 400px;
+    min-width: 100%;
+    text-align: center;
   }
 `

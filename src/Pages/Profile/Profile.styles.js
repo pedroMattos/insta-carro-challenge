@@ -9,6 +9,9 @@ export const Banner = styled.div`
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 0 30%;
+  @media (max-width: 800px) {
+    min-width: 200px;
+  }
   ` : ''}
 `
 
@@ -25,6 +28,9 @@ export const Overlay = styled.div`
 
 export const BannerWrapper = styled.div`
   position: relative;
+  @media (max-width: 800px) {
+    min-width: 200px;
+  }
 `
 
 export const ProfiteTitle = styled.h1`
@@ -36,6 +42,9 @@ export const ProfiteTitle = styled.h1`
   top: 50px;
   left: 10%;
   margin: 0;
+  @media (max-width: 800px) {
+    min-width: 400px;
+  }
 `
 
 export const ComicCardsWrapper = styled.div`

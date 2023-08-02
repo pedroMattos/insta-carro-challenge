@@ -13,6 +13,10 @@ export const HeroDetailCardWrapper = styled.div`
   display: flex;
   align-items: center;
   gap: 20px;
+  @media (max-width: 800px) {
+    min-width: 90%;
+    margin: 0 auto;
+  }
 `
 
 export const HeroThumbNail = styled.figure`
@@ -32,6 +36,14 @@ export const HeroNameAndDescription = styled.div`
   display: flex;
   flex-direction: column;
   padding-right: 70px;
+  @media (max-width: 800px) {
+    padding-right: 10px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+  }
 `
 
 export const HeroName = styled.p`

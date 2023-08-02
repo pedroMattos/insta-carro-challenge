@@ -21,7 +21,7 @@ export const FooterContainer = styled.footer`
   @media (max-width: 800px) {
     flex-direction: column;
     gap: 10px;
-    min-width: 500px;
+    min-width: 200px;
     height: 200px;
     align-items: center;
   }

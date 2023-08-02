@@ -12,7 +12,7 @@ export const CustomField = styled.input`
     color: var(--orange);
   }
   @media (max-width: 800px) {
-    max-width: 200px;
+    width: 200px;
     margin: 0 auto;
   }
 `
