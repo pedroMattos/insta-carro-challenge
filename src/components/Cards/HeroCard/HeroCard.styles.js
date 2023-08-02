@@ -12,6 +12,7 @@ export const HeroCardWrapper = styled.div`
   padding-top: 10px;
   gap: 10px;
   cursor: pointer;
+  background-color: white;
 `
 
 export const HeroFigure = styled.figure`
