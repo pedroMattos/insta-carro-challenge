@@ -15,7 +15,7 @@ export default function ComicsCard({ comicData }) {
       <ComicTitleAndDescriptions>
         <ComicTitle>{comicData.title}</ComicTitle>
         <DatesAndPages>{comicDate} <CircleIcon width={10} height={10}/> {comicData.pageCount} pages</DatesAndPages>
-        <ComicDescription>{comicDescription}</ComicDescription>
+        <ComicDescription dangerouslySetInnerHTML={{__html: comicDescription}}/>
       </ComicTitleAndDescriptions>
     </ComicsCardWrapper>
   )
