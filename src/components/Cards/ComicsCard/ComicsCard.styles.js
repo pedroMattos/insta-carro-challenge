@@ -24,7 +24,10 @@ export const ComicCover = styled.figure`
 `
 
 export const ComicTitleAndDescriptions = styled(HeroNameAndDescription)`
+`
 
+export const DatesAndPages = styled.p`
+  font-size: 14px;
 `
 
 export const ComicTitle = styled(HeroName)`
@@ -40,7 +43,7 @@ export const ComicDescription = styled.p`
   text-overflow: ellipsis;
   overflow: hidden;
   display: -webkit-box;
-  -webkit-line-clamp: 4;
+  -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   margin: 0;
 `

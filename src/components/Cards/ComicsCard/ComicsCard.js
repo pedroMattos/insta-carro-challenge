@@ -1,9 +1,11 @@
-import { ComicCover, ComicDescription, ComicTitle, ComicTitleAndDescriptions, ComicsCardWrapper } from "./ComicsCard.styles";
+import CircleIcon from "../../Icons/CircleIcon/Circleicon";
+import { ComicCover, ComicDescription, ComicTitle, ComicTitleAndDescriptions, ComicsCardWrapper, DatesAndPages } from "./ComicsCard.styles";
 import useComicDate from "./hooks/useComicDate";
 
 export default function ComicsCard({ comicData }) {
   const comicDate = useComicDate(comicData.dates, "onsaleDate")
   const comicDescription = !!comicData.description?.trim() ? comicData.description : 'Quadrinho sem descrição'
+  console.log(comicData)
 
   return (
     <ComicsCardWrapper>
@@ -12,7 +14,7 @@ export default function ComicsCard({ comicData }) {
       </ComicCover>
       <ComicTitleAndDescriptions>
         <ComicTitle>{comicData.title}</ComicTitle>
-        <p>{comicDate} * 47 pages</p>
+        <DatesAndPages>{comicDate} <CircleIcon width={10} height={10}/> {comicData.pageCount} pages</DatesAndPages>
         <ComicDescription>{comicDescription}</ComicDescription>
       </ComicTitleAndDescriptions>
     </ComicsCardWrapper>
