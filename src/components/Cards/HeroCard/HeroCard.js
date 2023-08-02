@@ -2,8 +2,11 @@ import { useNavigate } from "react-router-dom";
 import LoveIconOff from "../../Icons/LoveIconOff/LoveIconOff";
 import { HeroCardWrapper, HeroDescription, HeroFigure, HeroLoveAndName, HeroName, LoveButton } from "./HeroCard.styles";
 import { connect } from "react-redux";
+import useFavorites from "../../../hooks/useFavorites";
+import LoveIcon from "../../Icons/LoveIcon/LoveIcon";
 
 function HeroCard({ heroData, dispatch }) {
+  const { favoriteHero, myFavoriteHero } = useFavorites(heroData.id)
   const navigate = useNavigate()
   const heroDescriptionText = !!heroData.description.trim() ? heroData.description : 'Herói sem descrição'
   const handleNavigate = () => {
@@ -17,8 +20,10 @@ function HeroCard({ heroData, dispatch }) {
       </HeroFigure>
       <HeroLoveAndName>
         <HeroName onClick={handleNavigate}>{heroData.name}</HeroName>
-        <LoveButton>
+        <LoveButton onClick={() => favoriteHero(heroData)}>
+          {!myFavoriteHero ?
           <LoveIconOff width={20} height={20} />
+          : <LoveIcon width={20} height={20} />}
         </LoveButton>
       </HeroLoveAndName>
       <HeroDescription onClick={handleNavigate}>
