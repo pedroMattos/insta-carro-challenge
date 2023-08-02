@@ -96,3 +96,9 @@ export const HomeWrapper = styled.div`
     width: 100vw;
   }
 `
+
+export const EmptyStateWrapper = styled.div`
+  display: flex;
+  width: 100%;
+  justify-content: center;
+`

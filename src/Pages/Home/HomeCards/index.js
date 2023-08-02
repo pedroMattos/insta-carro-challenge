@@ -25,6 +25,7 @@ export default function HomeCards() {
       </CardsSectionHeader>
       <CardsArea>
         <AllHeroes
+          totalItems={totalItems}
           isLoadingFavorites={isLoadingFavorites}
           isLoading={isLoading}
           heroesData={heroes}
