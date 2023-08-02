@@ -3,7 +3,7 @@ import useComicDate from "./hooks/useComicDate";
 
 export default function ComicsCard({ comicData }) {
   const comicDate = useComicDate(comicData.dates, "onsaleDate")
-  const comicDescription = !!comicData.description.trim() ? comicData.description : 'Quadrinho sem descrição'
+  const comicDescription = !!comicData.description?.trim() ? comicData.description : 'Quadrinho sem descrição'
 
   console.log(comicDate)
   return (
