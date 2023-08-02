@@ -11,6 +11,10 @@ export const CustomField = styled.input`
   &::placeholder {
     color: var(--orange);
   }
+  @media (max-width: 800px) {
+    max-width: 200px;
+    margin: 0 auto;
+  }
 `
 
 export const InputWrapper = styled.div`
@@ -20,5 +24,8 @@ export const InputWrapper = styled.div`
     position: absolute;
     top: 10px;
     left: 40px;
+  }
+  @media (max-width: 800px) {
+    margin: 10px auto;
   }
 `

@@ -5,6 +5,10 @@ export const HomeHeaderWrapper = styled.nav`
   flex-direction: column;
   margin-top: 120px;
   align-items: center;
+  @media (max-width: 800px) {
+    width: 500px;;
+    margin: 0 auto;
+  }
 `
 
 export const HomeTitle = styled.h1`
@@ -14,7 +18,10 @@ export const HomeTitle = styled.h1`
   line-height: normal;
   color: var(--black);
   text-align: center;
-  `
+  @media (max-width: 800px) {
+    padding: 10px;
+  }
+`
   
   export const HeaderText = styled.p`
   text-align: center;
@@ -23,6 +30,10 @@ export const HomeTitle = styled.h1`
   font-weight: 500;
   color: var(--black);
   opacity: .6;
+  @media (max-width: 800px) {
+    text-align: center;
+    padding: 0 10px;
+  }
 `
 
 export const CardsSection = styled.section`
@@ -31,11 +42,21 @@ export const CardsSection = styled.section`
   margin: 0 auto;
   flex-direction: column;
   margin-top: 50px;
+  @media (max-width: 800px) {
+    max-width: 500px;
+  }
 `
 
 export const CardsSectionHeader = styled.div`
   display: flex;
   justify-content: space-between;
+  @media (max-width: 800px) {
+    margin: 20px 40px;
+    justify-content: space-between;
+    flex-direction: column-reverse;
+    gap: 10px;
+    align-items: center;
+  }
 `
 
 export const HeroesCounter = styled.p`
@@ -70,4 +91,7 @@ export const HomeWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  @media (max-width: 800px) {
+    max-width: 600px;
+  }
 `

@@ -5,6 +5,10 @@ export const PaginationWrapper = styled.div`
   margin-top: 20px;
   gap: 10px;
   justify-content: flex-end;
+  @media (max-width: 800px) {
+    gap: 5px;
+    justify-content: center;
+  }
 `
 
 export const NextPrevButton = styled.button`
@@ -15,6 +19,14 @@ export const NextPrevButton = styled.button`
   box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.20);
   border-radius: 4px;
   border: 0;
+  @media (max-width: 800px) {
+    width: 35px;
+    height: 35px;
+    svg {
+      width: 15px;
+      height: 15px;
+    }
+  }
 `
 
 export const PageButton = styled.button`
@@ -29,6 +41,10 @@ export const PageButton = styled.button`
   border: 1px solid white;
   `}
   border-radius: 4px;
+  @media (max-width: 800px) {
+    width: 35px;
+    height: 35px;
+  }
 `
 
 export const Ellipsis = styled.span`

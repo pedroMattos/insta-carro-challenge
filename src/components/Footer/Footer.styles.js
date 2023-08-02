@@ -18,4 +18,11 @@ export const FooterContainer = styled.footer`
       color: var(--gray-dark);
     }
   }
+  @media (max-width: 800px) {
+    flex-direction: column;
+    gap: 10px;
+    min-width: 500px;
+    height: 200px;
+    align-items: center;
+  }
 `
